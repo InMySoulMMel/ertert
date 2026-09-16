@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Frequency Analysis of The Travels of Lao Can (老残游记)</title>
+    <style>
+        body {
+            font-family: "Noto Sans", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            color: #222;
+            line-height: 1.6;
+        }
+        h1 { font-size: 1.6rem; border-bottom: 2px solid #4C72B0; padding-bottom: 0.5rem; }
+        h2 { font-size: 1.2rem; margin-top: 2rem; }
+        img { max-width: 100%; height: auto; border: 1px solid #ddd; }
+        table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+        th, td { border: 1px solid #ccc; padding: 0.35rem 0.75rem; text-align: left; }
+        th { background: #eef2f8; }
+        td:nth-child(1) { width: 12%; }
+        td:nth-child(3) { width: 20%; }
+        .meta { color: #666; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <h1>Word Frequency Analysis of <em>The Travels of Lao Can</em> (老残游记)</h1>
+
+    <h2>Introduction</h2>
+    <p>
+        This page presents a simple computational text analysis of the opening
+        three chapters (第一回–第三回) of <em>The Travels of Lao Can</em>
+        (《老残游记》), a late Qing dynasty novel by Liu E (刘鹗), written
+        1903–1907. The source text was cleaned before analysis: the table of
+        contents, Liu E's self-preface (自叙), Hu Shih's preface (胡适序), and
+        Liu E's chapter-end commentaries (marked with ※※※) were all stripped,
+        leaving only the narrative body of the first three chapters (~16,000
+        characters). The text was segmented with <code>jieba</code>, common
+        Chinese stop words and single-character tokens were removed, and word
+        frequencies were counted.
+    </p>
+
+    <h2>Top 20 Most Frequent Words</h2>
+    <img src="chart.png" alt="Bar chart of the 20 most frequent words in the first three chapters of Lao Can You Ji">
+
+    <h2>Top 50 Most Frequent Words</h2>
+    <table>
+        <thead>
+            <tr><th>Rank</th><th>Word</th><th>Count</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>1</td><td>老残</td><td>67</td></tr>
+        <tr><td>2</td><td>宫保</td><td>28</td></tr>
+        <tr><td>3</td><td>说道</td><td>19</td></tr>
+        <tr><td>4</td><td>先生</td><td>17</td></tr>
+        <tr><td>5</td><td>里面</td><td>15</td></tr>
+        <tr><td>6</td><td>地方</td><td>14</td></tr>
+        <tr><td>7</td><td>时候</td><td>14</td></tr>
+        <tr><td>8</td><td>不知</td><td>13</td></tr>
+        <tr><td>9</td><td>声音</td><td>12</td></tr>
+        <tr><td>10</td><td>之后</td><td>12</td></tr>
+        <tr><td>11</td><td>渐渐</td><td>12</td></tr>
+        <tr><td>12</td><td>许多</td><td>12</td></tr>
+        <tr><td>13</td><td>知道</td><td>12</td></tr>
+        <tr><td>14</td><td>觉得</td><td>12</td></tr>
+        <tr><td>15</td><td>一声</td><td>11</td></tr>
+        <tr><td>16</td><td>一张</td><td>11</td></tr>
+        <tr><td>17</td><td>旁边</td><td>11</td></tr>
+        <tr><td>18</td><td>仿佛</td><td>10</td></tr>
+        <tr><td>19</td><td>便是</td><td>10</td></tr>
+        <tr><td>20</td><td>有个</td><td>10</td></tr>
+        <tr><td>21</td><td>一只</td><td>10</td></tr>
+        <tr><td>22</td><td>船上</td><td>10</td></tr>
+        <tr><td>23</td><td>及至</td><td>9</td></tr>
+        <tr><td>24</td><td>弦子</td><td>9</td></tr>
+        <tr><td>25</td><td>一段</td><td>9</td></tr>
+        <tr><td>26</td><td>不是</td><td>9</td></tr>
+        <tr><td>27</td><td>看见</td><td>9</td></tr>
+        <tr><td>28</td><td>今日</td><td>9</td></tr>
+        <tr><td>29</td><td>两个</td><td>9</td></tr>
+        <tr><td>30</td><td>白妞</td><td>9</td></tr>
+        <tr><td>31</td><td>兄弟</td><td>9</td></tr>
+        <tr><td>32</td><td>法子</td><td>8</td></tr>
+        <tr><td>33</td><td>十分</td><td>8</td></tr>
+        <tr><td>34</td><td>甚为</td><td>8</td></tr>
+        <tr><td>35</td><td>后面</td><td>8</td></tr>
+        <tr><td>36</td><td>坐下</td><td>8</td></tr>
+        <tr><td>37</td><td>只见</td><td>8</td></tr>
+        <tr><td>38</td><td>船主</td><td>8</td></tr>
+        <tr><td>39</td><td>好处</td><td>8</td></tr>
+        <tr><td>40</td><td>王小玉</td><td>7</td></tr>
+        <tr><td>41</td><td>一条</td><td>7</td></tr>
+        <tr><td>42</td><td>园子</td><td>7</td></tr>
+        <tr><td>43</td><td>二十</td><td>7</td></tr>
+        <tr><td>44</td><td>名叫</td><td>7</td></tr>
+        <tr><td>45</td><td>三人</td><td>7</td></tr>
+        <tr><td>46</td><td>桌子</td><td>7</td></tr>
+        <tr><td>47</td><td>一片</td><td>7</td></tr>
+        <tr><td>48</td><td>慧生</td><td>7</td></tr>
+        <tr><td>49</td><td>实在</td><td>7</td></tr>
+        <tr><td>50</td><td>驾驶</td><td>7</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Observations</h2>
+    <p>
+        The protagonist 老残 towers over the list (67 occurrences, more than
+        double the second-ranked word), confirming that the novel is tightly
+        focalized through its wandering physician-narrator, while 宫保
+        (28), 先生 (17), 白妞 (9), 王小玉 (7), and 慧生 (7) trace the supporting
+        cast of officials and entertainers he encounters. The prominence of
+        说道, 不知, 只见, 仿佛, and 渐渐 reflects the novel's
+        storyteller-style narration, in which scenes are introduced through
+        observation and gradual, impressionistic perception rather than direct
+        psychological disclosure. Finally, concrete setting words — 船上,
+        船主, 弦子, 园子, 桌子 — mirror the two signature set pieces of these
+        chapters: the allegorical storm-tossed ship (a metaphor for a
+        foundering China) and the celebrated singing performance of Wang
+        Xiaoyu at Minghu Garden.
+    </p>
+
+    <p class="meta">
+        Method: Python 3 + jieba segmentation, stop-word filtering (single
+        characters removed), frequency counting. Files: <code>word_freq.py</code>,
+        <code>frequency_results.txt</code>, <code>chart.png</code>,
+        <code>requirements.txt</code>.
+    </p>
+</body>
+</html>
